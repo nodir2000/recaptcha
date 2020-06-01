@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    
     <h1>Application</h1>
-    <!-- <Formwizard /> -->
-    <Firebase/>
+    <Formwizard />
+    <!-- <Firebase/> -->
     <!-- <Card/> -->
     <!-- <router-view/> -->
   </div>
@@ -12,14 +11,14 @@
 
 // import Card from './card/Card.vue' 
 // import Login from './Login/index';
-import Firebase from './firebase/Index.vue'
-// import Formwizard from './formWizard/index.vue'
+// import Firebase from './firebase/Index.vue'
+import Formwizard from './formWizard/index.vue'
 
 export default {
   name: 'Todos',
   components:{
-    Firebase,
-  // Formwizard,  
+    // Firebase,
+  Formwizard,  
     //  Card,
     // Login
     }
@@ -32,7 +31,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   
 }
 </style>
