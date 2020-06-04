@@ -65,15 +65,13 @@ export default {
         this.error = 'Fill Out The Number To The End!!!';
         return;
       }
-      // this.step++;
+      this.step++;
       // localStorage.setItem('userPhoneNumber',this.user.phone);
       firebase.auth().signInWithPhoneNumber(this.user.phone,this.auth.phoneAuth)
       .then(function(confirmationResult){
         console.log('confirmationResult',confirmationResult)
-        this.step++;
-        this.auth.acceptedCode = confirmationResult;
         
-        
+        window.confirmationResult = confirmationResult;              
       })
       .catch(function(error){
         console.log('Error',error);
@@ -96,7 +94,7 @@ export default {
     
     
     // this.$router.push({ path:'/card'});
-    this.auth.acceptedCode.confirm(code)
+    window.confirmationResult.confirm(code)
         .then(result => {
             console.log("SUCECS")
             localStorage.setItem('allowedRegister','true');
