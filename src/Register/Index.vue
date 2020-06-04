@@ -23,7 +23,7 @@
                     <button type="submit" class="btn succes" >Craete Account</button>
 
               </form>
-              <p>Already Registrated? <span><router-link to = '/'>Login</router-link></span></p>
+              <p>Already Registrated? <span><router-link to = '/login'>Login</router-link></span></p>
           </div>
     </div>
 </template>
@@ -37,8 +37,17 @@ export default {
                 username:'',
                 email:'',
                 password:'',
-                image:''
+                image:'',
+                phone:''
             }
+        }
+    },
+    mounted(){
+        const allowed = localStorage.getItem('allowedRegister');
+        this.user.phone = localStorage.getItem('userPhoneNumber');
+        console.log('allowed',allowed)
+        if((!allowed)){
+            this.$router.push({path:'./'})
         }
     },
     methods:{
@@ -55,6 +64,7 @@ export default {
 
             if((this.user.username)&&(this.user.email)&&(this.user.password)){
                 this.user.id = Date.now();
+                
                 users.push(this.user);
                 localStorage.setItem('users',JSON.stringify(users));
                 
@@ -66,6 +76,8 @@ export default {
                     timer: 1500
                 });
                 this.reset();
+                localStorage.removeItem('allowedRegister');
+                this.$router.push({path:'./login'})
             }
         },
         openLocalFile(){

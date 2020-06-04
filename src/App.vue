@@ -1,24 +1,20 @@
 <template>
   <div id="app">
     <h1>Application</h1>
-    <Formwizard />
-    <!-- <Firebase/> -->
-    <!-- <Card/> -->
-    <!-- <router-view/> -->
+    <!-- <Formwizard/> -->
+    <!-- <Login/> -->
+    <router-view/>
   </div>
 </template>
 <script>
 
-// import Card from './card/Card.vue' 
-// import Login from './Login/index';
-// import Firebase from './firebase/Index.vue'
-import Formwizard from './formWizard/index.vue'
-
+// import Formwizard from './form-wizard/index.vue'
+// import Login from './Login/Index'
 export default {
   name: 'Todos',
   components:{
     // Firebase,
-  Formwizard,  
+  // Formwizard,  
     //  Card,
     // Login
     }

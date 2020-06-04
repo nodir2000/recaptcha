@@ -2,7 +2,6 @@
   <div class="stepTwoInp">
     <div>
       <div id="recaptcha-container"></div>
-      {{phone}}
       <el-input id="number" class="input" type="text" placeholder="Enter Phone" v-model="phone"></el-input>
       <el-input class="input" v-model="email" type="text" placeholder="Enter Email"></el-input>
       <el-button class="btn" type="primary" @click="phoneAuth();">SendCode</el-button>

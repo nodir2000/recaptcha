@@ -3,7 +3,7 @@
       <div  id="activeUser">
         <img class="userImg"  :src="(user && user.image ? user.image :'/pictures/1.jpg')" alt="">
         <span class="userName">
-          {{user.username}}
+          {{user.username || user.phone}}
         </span>
         <span class="userEmail">
           {{user.email}}

@@ -21,6 +21,10 @@ export default new Router({
         // }
         {
             path:'/',
+            component:()=>import('@/form-wizard/index.vue')
+        },
+        {
+            path:'/login',
             component:()=>import('@/Login/Index.vue'),
         },
         {

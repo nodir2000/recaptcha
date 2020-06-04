@@ -57,7 +57,7 @@ export default {
             this.createCardsFromLS();
         }
         else{
-            this.$router.push({ path:'/'});
+            this.$router.push({ path:'/login'});
         }
         
     },
@@ -72,7 +72,7 @@ export default {
         },
 
         logout(){            
-            this.$router.push({ path:'/'});
+            this.$router.push({ path:'/login'});
             localStorage.removeItem('isUserLoggedIn');
             localStorage.removeItem('user')
         },
